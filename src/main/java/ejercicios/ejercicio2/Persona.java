@@ -16,6 +16,11 @@ public class Persona {
     private double Peso;
     private int Altura;
     
+    //Metodos get
+    public String GetNombre() {
+        return this.Nombre;
+    }
+    
     //Default constructor
     public Persona() {
         this.Nombre = "";
@@ -34,10 +39,9 @@ public class Persona {
     }
     
     //This is the last constructor with all the properties
-    public Persona(String Nombre, String DNI,int Edad, String Sexo, double Peso, int Altura) {
+    public Persona(String Nombre, int Edad, String Sexo, double Peso, int Altura) {
         this.Nombre = Nombre;
         this.Edad = Edad;
-        this.DNI = DNI;
         this.Sexo = Sexo;
         this.Peso = Peso;
         this.Altura = Altura;
@@ -63,6 +67,25 @@ public class Persona {
         }
         
         return result;
+    }
+    
+    //Method to calc age
+    public boolean esMayorDeEdad() {
+        boolean result = false;
+        
+        if (this.Edad >= 18) {
+            result = true;
+        }
+        else {
+            result = false;
+        }
+        
+        return result;
+    }
+    
+    //Methodtu return all the object
+    public Persona ToString() {
+        return this;
     }
     
 }

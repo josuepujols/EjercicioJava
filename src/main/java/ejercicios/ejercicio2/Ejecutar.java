@@ -13,16 +13,12 @@ public class Ejecutar {
     public static void main(String[] args) { 
         //Instancias
         Scanner in = new Scanner(System.in);
-        Persona persona = new Persona();
         
         System.out.print("Ingrese su nombre:");
         String Nombre = in.nextLine();
         
         System.out.print("Ingrese su edad:");
         int Edad = in.nextInt();
-        
-        System.out.print("Ingrese su DNI:");
-        String DNI = in.nextLine();
         
         System.out.print("Ingrese su Sexo:");
         String Sexo = in.nextLine();
@@ -33,6 +29,9 @@ public class Ejecutar {
         System.out.print("Ingrese su Altura en Metros:");
         int Altura = in.nextInt();
         
+        Persona persona = new Persona();
+        Persona persona2 = new Persona(Nombre, Edad, Sexo);
+        Persona persona3 = new Persona(Nombre, Edad, Sexo, Peso, Altura);
         
         
     }
